@@ -68,7 +68,7 @@ func (app *App) add(msg maelstrom.Message) error {
 	}
 
 	if err := app.Add(add.Delta); err != nil {
-		return nil
+		return err
 	}
 
 	reply := Reply{Type: "add_ok"}
